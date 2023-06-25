@@ -11,7 +11,7 @@ import Home from "./pages/home/Home";
 import Details from "./pages/details/Details";
 import Explore from "./pages/explore/Explore";
 import PageNotFound from "./pages/notFound/PageNotFound";
-import SearchResult from "./pages/search/searchResult";
+import SearchResult from "./pages/search/SearchResult";
 
 function App() {
   useEffect(() => {
