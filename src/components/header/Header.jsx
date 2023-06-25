@@ -53,9 +53,6 @@ const Header = () => {
     if (e.key === "Enter" && query.length > 0) {
       navigate(`/search/${query}`);
     }
-    setTimeout(() => {
-      setShowSearch(false);
-    }, 1000);
   };
 
   const navigationHandler = (type) => {
@@ -80,8 +77,8 @@ const Header = () => {
           <li className="menuItem" onClick={() => navigationHandler("tv")}>
             TV Shows
           </li>
-          <li className="menuItem">
-            <HiOutlineSearch onClick={openSearch} />
+          <li className="menuItem" onClick={openSearch}>
+            <HiOutlineSearch />
           </li>
         </ul>
         <div className="mobileMenuItems">
@@ -104,7 +101,12 @@ const Header = () => {
                 onChange={(e) => setQuery(e.target.value)}
               />
             </div>
-            <VscChromeClose onClick={() => setShowSearch(false)} />
+            <div
+              className="icon-close-search"
+              onClick={() => setShowSearch(false)}
+            >
+              <VscChromeClose />
+            </div>
           </ContentWrapper>
         </div>
       )}

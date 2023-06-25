@@ -2,7 +2,7 @@
 .footer {
   background-color: var(--black3);
   padding: 50px 0;
-  color: white;
+  color: var(--white);
   position: relative;
   .contentWrapper {
     display: flex;
@@ -53,7 +53,7 @@
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      color: white;
+      color: var(--white);
       background-color: var(--black);
       display: flex;
       align-items: center;

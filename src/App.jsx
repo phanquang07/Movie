@@ -10,7 +10,7 @@ import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import Details from "./pages/details/Details";
 import Explore from "./pages/explore/Explore";
-import NotFound from "./pages/notFound/NotFound";
+import PageNotFound from "./pages/notFound/PageNotFound";
 import SearchResult from "./pages/search/searchResult";
 
 function App() {
@@ -49,7 +49,6 @@ function App() {
     });
 
     const data = await Promise.all(promises);
-    console.log("data: ", data);
 
     data.map(({ genres }) => {
       return genres.map((item) => (allGenres[item.id] = item));
@@ -67,7 +66,7 @@ function App() {
         <Route path="/:mediaType/:id" element={<Details />} />
         <Route path="/search/:query" element={<SearchResult />} />
         <Route path="/explore/:mediaType" element={<Explore />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>
